@@ -551,13 +551,13 @@ async function generateBatchQRCodes(format: 'png' | 'svg') {
         class="mb-8 flex w-full flex-row flex-wrap justify-between gap-4 md:mb-4 md:w-5/6 md:ps-4"
       >
         <div class="flex items-center gap-2">
-          <h1 class="text-3xl text-gray-700 dark:text-gray-100">MiniQR</h1>
+          <h1 class="text-3xl text-gray-700 dark:text-gray-100">QR Code</h1>
         </div>
         <div class="flex flex-row items-center justify-end gap-4">
           <div class="flex flex-row items-center gap-2">
             <a
               class="icon-button"
-              href="https://github.com/lyqht/styled-qr-code-generator"
+              href="https://github.com/actcmsvn/qr-code"
               target="_blank"
               :aria-label="t('GitHub repository for this project')"
             >

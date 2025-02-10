@@ -2,7 +2,7 @@
 version: "3.8"
 services:
   mini-qr:
-    image: ghcr.io/lyqht/mini-qr:latest
+    image: ghcr.io/actcmsvn/qr-code:latest
     container_name: qr-code
     ports:
       - 8081:8080
