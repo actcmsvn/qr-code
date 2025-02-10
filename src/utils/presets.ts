@@ -245,24 +245,24 @@ export const vueJsPreset: Preset = {
 
 export const defaultPreset: Preset = {
   ...defaultPresetOptions,
-  name: 'Default (lyqht)',
-  data: 'https://github.com/lyqht',
+  name: 'Default (ACTCMS)',
+  data: 'https://actcms.io.vn',
   image: PLACEHOLDER_IMAGE_URL,
   dotsOptions: {
-    color: '#abcbca',
+    color: '#00a651',
     type: 'extra-rounded'
   },
   cornersSquareOptions: {
-    color: '#abcbca',
+    color: '#00a651',
     type: 'extra-rounded'
   },
   cornersDotOptions: {
-    color: '#abcbca',
+    color: '#00a651',
     type: 'square'
   },
   style: {
     borderRadius: '24px',
-    background: '#697d80'
+    background: '#000000'
   }
 }
 export const pejuangKodePreset: Preset = {
