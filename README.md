@@ -28,6 +28,23 @@ A customizable QR code generator to create beautiful and unique QR codes.
 - 🛡️ Error correction level: affects the size of the QR code and logo within. Use lower correction levels for bigger pieces of data to ensure that it can be read.
 - 📦 Batch data export: Import a CSV file with multiple data strings and export QR codes for them all at once.
 
+## API
+
+The project includes a simple API endpoint that returns a QR code as a PNG image.
+
+```txt
+GET /api/qr?text=<content>&size=250
+```
+
+- `text`: required, the content to encode into the QR code
+- `size`: optional, PNG width in pixels. Default is `250`
+
+Example:
+
+```txt
+https://qr-code-seven-tan.vercel.app/api/qr?text=00020101021238530010A000000727012300069704230109mynamebvh0208QRIBFTTA53037045405500005802VN62080804test6304AB76
+```
+
 ## Self-hosting with Docker 🐋
 
 Mini-QR can easily be self-hosted. We provide a [docker-compose.yml](docker-compose.yml) file as well as our own images. We are using GitHub's `ghrc.io` Container Registry.

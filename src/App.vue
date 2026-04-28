@@ -95,6 +95,12 @@ const imageOptions = computed(() => ({
 const qrOptions = computed(() => ({
   errorCorrectionLevel: errorCorrectionLevel.value
 }))
+const apiExampleText =
+  '00020101021238530010A000000727012300069704230109mynamebvh0208QRIBFTTA53037045405500005802VN62080804test6304AB76'
+const apiBaseUrl = typeof window !== 'undefined' ? window.location.origin : ''
+const apiExampleUrl = computed(
+  () => `${apiBaseUrl}/api/qr?text=${encodeURIComponent(apiExampleText)}`
+)
 
 const qrCodeProps = computed<StyledQRCodeProps>(() => ({
   data: data.value,
@@ -1220,6 +1226,27 @@ async function generateBatchQRCodes(format: 'png' | 'svg') {
                 </div>
               </fieldset>
             </div>
+            <section class="w-full rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-800/70">
+              <h2 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">API</h2>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                Gọi endpoint <code>/api/qr</code> với tham số <code>text</code> để nhận ảnh
+                QR PNG. Có thể truyền thêm <code>size</code> để đổi kích thước, mặc định là
+                <code>250</code>.
+              </p>
+              <div class="api-example mt-3">
+                <p class="text-sm font-medium text-zinc-700 dark:text-zinc-200">
+                  Ví dụ:
+                </p>
+                <a
+                  :href="apiExampleUrl"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mt-2 block break-all text-sm text-emerald-700 underline underline-offset-2 dark:text-emerald-300"
+                >
+                  {{ apiExampleUrl }}
+                </a>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -1285,5 +1312,9 @@ input[type='radio'] {
 .radiogroup > * > label,
 .radiogroup > label {
   @apply font-normal;
+}
+
+.api-example code {
+  @apply rounded bg-zinc-200 px-1 py-0.5 text-xs text-zinc-900 dark:bg-zinc-700 dark:text-zinc-100;
 }
 </style>

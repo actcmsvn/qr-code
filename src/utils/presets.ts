@@ -1,4 +1,3 @@
-import PLACEHOLDER_IMAGE_URL from '@/assets/placeholder_image.png'
 import GeeksHackingConfig from '@/assets/presets/geekshacking.json'
 import SpDigitalConfig from '@/assets/presets/spdigital.json'
 import GovtechStackCommunityConfig from '@/assets/presets/govtech_stack.json'
@@ -247,7 +246,7 @@ export const defaultPreset: Preset = {
   ...defaultPresetOptions,
   name: 'Default (ACTCMS)',
   data: 'https://actcms.io.vn',
-  image: PLACEHOLDER_IMAGE_URL,
+  image: '/favicon.svg',
   dotsOptions: {
     color: '#00a651',
     type: 'extra-rounded'
@@ -259,6 +258,9 @@ export const defaultPreset: Preset = {
   cornersDotOptions: {
     color: '#00a651',
     type: 'square'
+  },
+  imageOptions: {
+    margin: 10
   },
   style: {
     borderRadius: '24px',
